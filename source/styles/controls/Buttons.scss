@@ -1,0 +1,37 @@
+@import "../util/Themes.scss";
+@import "../util/Fancy.scss";
+
+/* standard buttons */
+
+.content button {
+    @include rounded;
+    @include themify($themes) { background-color:themed("buttonBackground"); }
+    padding:5px 20px 5px 20px;
+}
+
+.content button,
+.content button > div {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.content button .buttonDivider {
+    height:1px;
+    width:10px;
+}
+
+.content button i {
+    padding-top:4px;
+    font-size:1.00em;
+}
+
+.content button span {
+    font-size:1.15em;
+}
+
+.content button:active {
+    i, span {
+        @include themify($themes) { color:themed("accent"); }
+    }
+}

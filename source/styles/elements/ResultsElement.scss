@@ -1,0 +1,44 @@
+@import "../util/Themes.scss";
+@import "../util/Fancy.scss";
+
+/* results element */
+
+.resultsElement {
+    max-height:100vh;
+    display:flex;
+    flex-flow:column;
+    padding-bottom:30px;
+}
+
+.resultsElement header {
+    flex:0 1 auto;
+}
+
+.resultsElement .resultsWrapper {
+    @include rounded;
+    @include themify($themes) { background-color:darken(themed("background"), 3%); }
+    min-height:80px;
+    padding:25px;
+    flex:1 1 auto;
+    overflow-x:auto;
+}
+
+.resultsElement .results {
+    overflow:auto;
+}
+
+.resultsElement .paging {
+    padding-top:25px;
+    padding-bottom:25px;
+}
+
+.resultsElement .paging {
+    flex:0 1 auto;
+    display:flex;
+    justify-content:center;
+}
+
+.resultsElement .paging > div {
+    padding-left:25px;
+    padding-right:25px;
+}

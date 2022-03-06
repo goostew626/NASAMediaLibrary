@@ -1,0 +1,164 @@
+@import "../util/Themes.scss";
+@import "../util/Fancy.scss";
+
+/* show element */
+
+.showElementWrapper {
+    padding-bottom:30px;
+}
+
+.showElement {
+    @include rounded;
+    @include themify($themes) { background-color:darken(themed("background"), 3%); }
+    padding:30px 80px 30px 80px;
+}
+
+.showElement h3 {
+    font-size:1.25em;
+}
+
+.showElement .imagesWrapper {
+    width:100%;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+.showElement .images {
+    display:flex;
+    justify-content:center;
+    overflow:auto;
+}
+
+.showElement .images .image {
+    height:260px;
+    padding-right:30px;
+}
+
+.showElement .images .image:last-child {
+    padding-right:0;
+}
+
+.showElement .images .image img {
+    height:100%;
+}
+
+.showElement .table {
+    width:100%;
+}
+
+.showElement .table > .row > .col {
+    padding-bottom:6px;
+}
+
+.showElement .table > .row > .col > div {
+    width:100%;
+    overflow:hidden;
+}
+
+.showElement .table > .row:last-child > .col {
+    padding-bottom:0;
+}
+
+.showElement .table > .row > .col:first-child {
+    width:1px;
+    padding-right:10px;
+}
+
+.showElement .table input {
+    @include themify($themes) { background-color:lighten(themed("background"), 10%); }
+    width:100%;
+    font-size:0.85em;
+    padding:2px 10px 2px 10px;
+    background-color:transparent;
+}
+
+.showElement .table .colMultiple {
+    flex-wrap:wrap;
+}
+
+.showElement .table .keyword {
+    padding-right:10px;
+}
+
+.showElement .table .keyword:last-child {
+    padding-right:0;
+}
+
+.showElement .table .keyword > p {
+    @include rounded;
+    @include themify($themes) { background-color:lighten(themed("background"), 10%); }
+    font-size:0.85em;
+    padding:2px 10px 2px 10px;
+    background-color:transparent;
+}
+
+.showElement .buttons {
+    display:flex;
+    justify-content:center;
+    padding-top:30px;
+}
+
+@media only screen and (max-width:1000px) {
+
+    .showElement {
+        padding-left:30px;
+        padding-right:30px;
+    }
+
+}
+
+@media only screen and (max-width:700px) {
+
+    .showElement .images .image {
+        height:160px;
+        padding-right:30px;
+    }
+
+    .showElement .table {
+        display:block;
+    }
+
+    .showElement .table > .row {
+        display:block;
+    }
+
+    .showElement .table > .row > .col {
+        display:block;
+    }
+
+    .showElement .table > .row:last-child > .col {
+        padding-bottom:6px;
+    }
+
+    .showElement .table > .row > .col:first-child {
+        width:unset;
+    }
+
+    .showElement .table > .row {
+        padding-bottom:20px;
+    }
+
+    .showElement .table > .row:last-child {
+        padding-bottom:0;
+    }
+
+    .showElement input {
+        padding:5px 10px 5px 10px;
+    }
+
+    .showElement .buttons > div,
+    .showElement .buttons > div button {
+        width:100%;
+    }
+
+}
+
+/* transitions */
+
+.showElement {
+    transition:padding 0.2s ease-out;
+}
+
+.showElement .images .image {
+    transition:height 0.2s ease-out;
+}

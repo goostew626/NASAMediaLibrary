@@ -1,0 +1,115 @@
+@import "../util/Themes.scss";
+@import "../util/Fancy.scss";
+@import "../util/Tables.scss";
+
+@import "../controls/Inputs.scss";
+@import "../controls/Buttons.scss";
+@import "../controls/Forms.scss";
+
+@import "../elements/Headers.scss";
+
+@import "../elements/SearchElement.scss";
+@import "../elements/ResultsElement.scss";
+@import "../elements/ResultsElementItems.scss";
+
+@import "../elements/ShowElement.scss";
+
+/*
+general
+*/
+
+html, body, .themedWrapper, .themed {
+    height:100%;
+    width:100%;
+    min-height:400px;
+    margin:0;
+    padding:0;
+}
+
+h1, h2, h3, h4, h5, p, span, label, button, input, select {
+    display:block;
+    margin:0;
+    padding:0;
+    border:none;
+    outline:none;
+    background-color:transparent;
+    text-decoration:none;
+    font-weight:normal;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+div, span, label, button, input, select {
+    box-sizing: border-box;
+}
+
+/* correct blue highlighting on mobile */
+
+@media only screen and (max-width:700px) {
+
+    div, a, button, span {
+        -webkit-touch-callout:none;
+        -webkit-user-select:none;
+        -khtml-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+        -webkit-tap-highlight-color:transparent;
+    }
+
+}
+
+/* colors */
+
+body.theme-default {
+    background-color:#26282F;
+}
+
+.themed {
+    @include themify($themes) { background-color:themed("background"); }
+}
+
+h1, h2, h3, h4, h5, p, span, label, button, input, select {
+    @include themify($themes) { color:themed("font"); }
+}
+
+/* font defaults */
+
+h1, h2, h3, h4, h5, p, span, label, button, input, select {
+    font-family:"ubuntu-regular", sans-serif;
+    font-size:0.85em;
+}
+
+/* content */
+
+.content {
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:25px 100px 0 100px;
+}
+
+/* responsive */
+
+@media only screen and (max-width:1000px) {
+
+    .content {
+        padding:25px 50px 0 50px;
+    }
+
+}
+
+@media only screen and (max-width:700px) {
+
+    .content {
+        padding:25px 25px 0 25px;
+    }
+
+}
+
+/* transitions */
+
+.content {
+    transition:padding 0.2s ease-out;
+}

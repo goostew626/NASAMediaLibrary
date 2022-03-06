@@ -1,0 +1,35 @@
+@import "../util/Themes.scss";
+@import "../util/Fancy.scss";
+
+/* standard inputs */
+
+.content input,
+.content select {
+    @include themify($themes) { background-color:lighten(themed("background"), 10%); }
+}
+
+.content label,
+.content input,
+.content select {
+    font-size:1.00em;
+}
+
+.content input,
+.content select {
+    @include rounded;
+    min-width:100px;
+    padding:5px 10px 5px 10px;
+}
+
+/* replace default select icon */
+
+select {
+    padding-right:40px !important;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10'%3E%3Cpolygon points='0,0 20,0 10,10' fill='%23CCCCCC' /%3E%3C/svg%3E");
+    background-repeat:no-repeat, repeat;
+    background-position:right 9px top 50%, 0 0;
+    background-size:10px auto, 100%;
+}

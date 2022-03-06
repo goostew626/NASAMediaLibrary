@@ -1,0 +1,135 @@
+@import "../util/Themes.scss";
+@import "../util/Fancy.scss";
+
+/* results element items */
+
+.results .itemWrapper {
+    padding-bottom:25px;
+}
+
+.results .itemWrapper:last-child {
+    padding-bottom:0;
+}
+
+.results .item {
+    @include rounded;
+    @include themify($themes) { border:solid 2px lighten(themed("background"), 2%); }
+    display:flex;
+    align-items:stretch;
+    padding:20px;
+}
+
+.results .item > div {
+    padding-right:10px;
+}
+
+.results .item > div:last-child {
+    padding-right:0;
+}
+
+.results .item .main {
+    display:flex;
+}
+
+.results .item .buttons {
+    padding-right:10px;
+}
+
+.results .item .buttons button {
+    height:100%;
+    padding:0 7px 0 7px;
+}
+
+.results .item .image > div {
+    @include rounded;
+    @include backgroundImage;
+    @include themify($themes) { background-color:lighten(themed("background"), 10%); }
+    width:120px;
+    height:80px;
+}
+
+.results .item .text {
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+
+.results .item .text .table {
+    width:100%;
+}
+
+.results .item .text .table > .row > .col {
+    padding-bottom:6px;
+}
+
+.results .item .text .table > .row > .col > div {
+    width:100%;
+    overflow:hidden;
+}
+
+.results .item .text .table > .row:last-child > .col {
+    padding-bottom:0;
+}
+
+.results .item .text .table > .row > .col:first-child {
+    width:1px;
+    padding-right:10px;
+}
+
+.results .item .text .table input {
+    @include themify($themes) { background-color:lighten(themed("background"), 10%); }
+    width:100%;
+    font-size:0.85em;
+    padding:2px 10px 2px 10px;
+    background-color:transparent;
+}
+
+@media only screen and (max-width:700px) {
+
+    .results .item {
+        display:block;
+    }
+
+    .results .item .main {
+        justify-content:center;
+        padding-bottom:20px;
+    }
+
+    .results .item .image > div {
+        width:160px;
+        height:100px;
+    }
+
+    .results .item .text .table {
+        display:block;
+    }
+
+    .results .item .text .table > .row {
+        display:block;
+    }
+
+    .results .item .text .table > .row > .col {
+        display:block;
+    }
+
+    .results .item .text .table > .row:last-child > .col {
+        padding-bottom:6px;
+    }
+
+    .results .item .text .table > .row > .col:first-child {
+        width:unset;
+    }
+
+    .results .item .text .table > .row {
+        padding-bottom:20px;
+    }
+
+    .results .item .text .table > .row:last-child {
+        padding-bottom:0;
+    }
+
+    .results .item .text input {
+        padding:5px 10px 5px 10px;
+    }
+
+}

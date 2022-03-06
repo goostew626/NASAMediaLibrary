@@ -1,0 +1,70 @@
+@import "../util/Themes.scss";
+@import "../util/Fancy.scss";
+
+/* standard forms */
+
+.content form .inputs.table > .row > .col {
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.content form .inputs.table .col,
+.content form .table > .row > .col > .colMultiple > div {
+    padding-right:20px;
+}
+
+.content form .inputs.table .col:last-child,
+.content form .table > .row > .col > .colMultiple > div:last-child {
+    padding-right:0;
+}
+
+.content form .inputs.table input {
+    width:100%;
+}
+
+.content form .buttons {
+    display:flex;
+    justify-content:center;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+/* standard forms responsive */
+
+@media only screen and (max-width:700px) {
+
+    .content form .inputs.table {
+        display:block;
+    }
+
+    .content form .inputs.table > .row {
+        display:block;
+    }
+
+    .content form .inputs.table > .row > .col {
+        display:block;
+    }
+
+    .content form .inputs.table > .row {
+        padding-bottom:20px;
+    }
+
+    .content form .inputs.table > .row:last-child {
+        padding-bottom:0;
+    }
+
+    .content form .inputs.table > .row > .col {
+        padding-top:3px;
+        padding-bottom:3px;
+    }
+
+    .content form .buttons {
+        padding-top:23px;
+    }
+
+    .content form .buttons > div,
+    .content form .buttons button {
+        width:100%;
+    }
+
+}

@@ -1,0 +1,12 @@
+@import "../util/Themes.scss";
+@import "../util/Fancy.scss";
+
+/* search element */
+
+.searchElement {
+    @include rounded;
+    @include themify($themes) { background-color:darken(themed("background"), 3%); }
+    display:flex;
+    justify-content:center;
+    padding:30px 0 30px 0;
+}

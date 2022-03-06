@@ -1,0 +1,16 @@
+/* header */
+
+header {
+    padding:25px 0 25px 0;
+}
+
+header h1 {
+    font-family:"ubuntu-bold", sans-serif;
+    font-size:1.00em;
+    @include themify($themes) { color:themed("accent"); }
+}
+
+header h2 {
+    font-family:"ubuntu-regular", sans-serif;
+    font-size:1.60em;
+}

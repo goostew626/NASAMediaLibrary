@@ -1,0 +1,22 @@
+/* tables */
+
+.table {
+    display:table;
+}
+
+.table > .row {
+    display:table-row;
+}
+
+.table > .row > .col {
+    display:table-cell;
+}
+
+.table > .row > .col > .colMultiple {
+    display:flex;
+}
+
+.table > .row > .col > .colMultiple > div {
+    display:flex;
+    align-items:center;
+}
