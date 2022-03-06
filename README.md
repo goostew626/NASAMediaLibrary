@@ -13,6 +13,7 @@ The results will be populated below the search input and each one can be opened 
 ## Project Structure
 
 ```
+./public/ { latest project build }
 ./source/
 |-- scripts
 |   |-- elements
